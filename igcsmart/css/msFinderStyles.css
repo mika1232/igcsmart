@@ -1,0 +1,134 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #1e1e2d, #1b1b29);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Links */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #cc00ff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: rgba(30, 30, 45, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #cc00ff;
+    text-shadow: 0px 0px 8px #cc00ff;
+}
+
+nav a {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+}
+
+/* MarkScheme Finder Section */
+.markscheme-finder {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: #e0e0e0;
+}
+
+.markscheme-finder h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 10px #cc00ff;
+}
+
+.markscheme-finder p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Upload Form */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.upload-form label {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+}
+
+.upload-form input[type="file"] {
+    padding: 0.7rem;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #2a2a3d;
+    color: #ffffff;
+    font-size: 1rem;
+}
+.grade-predictor {
+    height: 67.7vh;
+}
+/* Upload Button */
+.upload-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    background: #cc00ff;
+    box-shadow: 0 0 10px #cc00ff, 0 0 20px #cc00ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #cc00ff, 0 0 30px #cc00ff;
+}
+
+/* Response Message */
+.response-message {
+    margin-top: 20px; /* Space above the response message */
+    font-size: 1.2rem; /* Font size for response */
+    color: #cccccc; /* Color for response text */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background-color: rgba(30, 30, 45, 0.9);
+    color: #cccccc;
+}
+
+footer .social-media a {
+    margin: 0 0.8rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+footer .social-media a:hover {
+    color: #cc00ff;
+}

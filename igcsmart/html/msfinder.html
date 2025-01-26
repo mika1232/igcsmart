@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Predictor | IGCSMart</title>
+  <link rel="stylesheet" href="../css/gradePredictorStyles.css">
+  <link rel="stylesheet" href="../css/msfinder.css">
+  <script src="/js/site-header.js" defer></script>
+  <script src="/js/site-footer.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+<site-header></site-header>
+
+  <!-- Grade Predictor Section -->
+  <section class="grade-predictor">
+    <style>
+
+      .grade-predictor {
+        height: 67.7vh;
+      }
+
+    </style>
+    <h1>MS Finder</h1>
+    <p> Look at the bottom of your past paper, in the middle should be a code separated by slashes (/)</p>
+    <form class="predictor-form" method="POST" action="/get_ms">
+        <label for="keyword"> Put the code here:</label>
+        <input type="text" id="keyword" name="keyword" placeholder="Keyword">
+        <button type="submit" class="predict-button">Get MarkScheme</button>
+    </form>
+
+    <br><br><br>
+
+
+  </section>
+
+  <!-- Footer -->
+<site-footer></site-footer>
+</body>
+</html>

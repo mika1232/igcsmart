@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Question Generator | IGCSMart</title>
+    <link rel="stylesheet" href="../css/gradePredictorStyles.css">
+    <script src="/js/site-header.js" defer></script>
+    <script src="/js/site-footer.js" defer></script>
+</head>
+<body>
+    <style>
+        .input {
+            color: white;
+            border: 2px solid #8707ff;
+            border-radius: 10px;
+            padding: 10px 25px;
+            background: transparent;
+            max-width: 190px;   
+        }
+
+        .input:active {
+            box-shadow: 2px 2px 15px #8707ff inset;
+        }
+
+    </style>
+    <!-- Header -->
+<site-header></site-header>
+
+    <!-- Random Question Generator Section -->
+    <section class="grade-predictor">
+        <style>
+            .grade-predictor {
+                height: 67.7vh;
+            }
+        </style>
+        <h1>Random Question Generator</h1>
+        <p>Enter the syllabus code and click the button below to generate a random question.</p>
+        <p style="font-size: 13px;">Please note that we are now in beta and do not yet support every syllabus!</p>
+
+        <!-- Syllabus Code Input -->
+        <form class="predictor-form" id="syllabus-form">
+            <label for="syllabus-code">Syllabus Code:</label>
+
+            <input class="input" name="text" type="text" id="syllabus-code" placeholder="Enter syllabus code" required>
+            <br><br>
+            <button type="submit" class="predict-button">Generate Question</button>
+        </form>
+
+        <div class="question-display">
+            <!--<img id="question-image" src="" alt="Generated Question"> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+<site-footer></site-footer>
+
+    <script>
+        document.getElementById('syllabus-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const syllabusCode = document.getElementById('syllabus-code').value;
+
+            fetch('/generate_image?syllabus_code=' + encodeURIComponent(syllabusCode))
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Failed to fetch image: " + response.statusText);
+                    }
+                    return response.blob(); // Convert response to a Blob
+                })
+                .then(imageBlob => {
+                    const imageUrl = URL.createObjectURL(imageBlob); // Create a URL for the image blob
+                    const imgElement = document.getElementById('question-image');
+                    imgElement.src = imageUrl; // Set the src of the img element
+                    imgElement.style.display = 'block'; // Show the image
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                    alert('Sorry, but we dont seem to support the syllabus you selected, send us an email and we will investigate further.'); // Show the error message
+                });
+        });
+    </script>
+</body>
+</html>

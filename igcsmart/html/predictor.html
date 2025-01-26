@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Predictor | IGCSMart</title>
+  <link rel="stylesheet" href="../css/gradePredictorStyles.css">
+  <script src="/js/site-header.js" defer></script>
+  <script src="/js/site-footer.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+<site-header></site-header>
+
+  <!-- Grade Predictor Section -->
+  <section class="grade-predictor">
+    <h1>Grade Predictor</h1>
+    <p>Estimate your potential grade by filling in the fields below.</p>
+    <form class="predictor-form" method="POST" action="/predict">
+      <label for="mock">Mock Grade (if none put 0):</label>
+      <input type="text" id="mock" name="mock" placeholder="Enter your mock grade">
+
+      <label for="study-hours">Study Hours per Week:</label>
+      <input type="number" id="study-hours" name="study-hours" placeholder="Enter your study hours">
+
+      <label for="interest">Subject Interest (1-10):</label>
+      <input type="number" id="interest" name="interest" placeholder="Enter subject interest">
+
+      <label for="pp-average">Practice paper average:</label>
+      <input type="text" id="pp-average" name="pp-average" placeholder="Enter PP average">
+
+      <button type="submit" class="predict-button"> Predict Grade </button>
+    </form>
+
+    <br><br><br>
+
+    <h2 id="title-from-qs" />
+        <script type="text/javascript">
+            document.getElementById('title-from-qs').innerHTML = new URLSearchParams(document.location.search).get('predicted_grade');
+        </script>
+
+
+  </section>
+
+  <!-- Footer -->
+<site-footer></site-footer>
+</body>
+</html>

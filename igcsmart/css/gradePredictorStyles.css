@@ -1,0 +1,163 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(145deg, #1e1e2d, #1b1b29);
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #cc00ff;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: rgba(30, 30, 45, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+
+
+  
+  .search-bar {
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 200px;
+    background-color: #2a2a3d;
+    color: #ffffff;
+  }
+  
+  .grade-predictor {
+    
+  }
+
+  .key-terms-finder h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 10px #cc00ff;
+  }
+  
+  .key-terms-finder p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Key Terms Form */
+  .key-terms-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .key-terms-form label {
+    font-size: 1rem;
+    color: #cccccc;
+  }
+  
+  .key-terms-form select {
+    padding: 0.7rem;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #2a2a3d;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+
+  /* Grade Predictor Section */
+  .grade-predictor {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: #e0e0e0;
+  }
+  
+  .grade-predictor h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .grade-predictor p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .predictor-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .predictor-form label {
+    font-size: 1rem;
+    color: #cccccc;
+  }
+  
+  .predictor-form input {
+    padding: 0.7rem;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid white;
+    outline: none;
+    background-color: #2a2a3d;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+  
+  .predict-button {
+    padding: 10px 80px; /* Increase top and bottom padding */
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    font-size: 15px;
+    
+    transition: all 0.5s ease;
+}
+
+  
+  .predict-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #cc00ff, 0 0 30px #cc00ff;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background-color: rgba(30, 30, 45, 0.9);
+    color: #cccccc;
+  }
+  
+  footer .social-media a {
+    margin: 0 0.8rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  
+  footer .social-media a:hover {
+    color: #cc00ff;
+  }
+  
