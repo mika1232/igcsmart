@@ -1,8 +1,8 @@
 from flask import Flask, render_template, url_for, request, jsonify, send_from_directory, redirect, Response, send_file
-from backend.random_question import generate
-from backend.predictor import predict
-from backend.msfinder import scan
-from backend.getcode import get_code_fun
+from random_question import generate
+from predictor import predict
+from msfinder import scan
+from getcode import get_code_fun
 
 import random
 import os
